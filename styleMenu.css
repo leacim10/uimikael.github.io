@@ -1,0 +1,17 @@
+
+
+/* MENU */
+.opciones {
+    display: grid;
+    /* gap: var(--sp-lg-5); */
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding: calc(2 * (var(--sp-base)));
+/* ----- DEFINIR AREAS ------ */
+    grid-template-areas:
+        "opcionMenu"
+        ;
+}
+.opcionMenu {
+    grid-area: opcionMenu;
+}

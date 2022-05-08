@@ -1,0 +1,53 @@
+.grid {
+    display: grid;
+    /* gap: var(--sp-lg-5); */
+    grid-template-rows: 1fr;
+    grid-template-columns: 15% 1fr;
+    /* padding: calc(4 * var(--sp-base)); */
+/* ----- DEFINIR AREAS ------ */
+    grid-template-areas:
+        "opciones   contenido"
+        ;
+}
+/* 
+.grid > * {
+    background-color: var(--bg-fondo);
+    
+    border-radius: 10px;
+
+} */
+
+
+
+.opciones {
+    grid-area: opciones;
+}
+
+.contenido {
+    grid-area: contenido;
+}
+
+
+/* section {
+    --icon-size: 58px;
+    --padding: var(--sp-lg-1);
+
+    background: var(--bg-tertiary);
+    border: var(--bd);
+    border-radius: var(--bd-radius);
+
+    display: grid;
+    grid-template-rows:max-content 1fr;
+} */
+
+.cont-bordes {
+    --icon-size: 58px;
+    --padding: var(--sp-lg-1);
+
+    background: var(--bg-tertiary);
+    border: var(--bd);
+    border-radius: var(--bd-radius);
+
+    display: grid;
+    grid-template-rows:max-content 1fr;
+}
