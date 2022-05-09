@@ -13,6 +13,7 @@
     display: flex;
     justify-items: center;
     align-items: center;
+    gap: 20px;
 }
 .contOpciones {
     grid-area: contOpciones;
@@ -32,7 +33,7 @@
     height: 130px;
     /* height: 250px; */
     transition: 0.5s;
-    margin: 10px;
+    /* margin: 10px; */
 }
 .card:hover {
     height: 250px;
