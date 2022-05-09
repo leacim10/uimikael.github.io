@@ -6,9 +6,54 @@
     /* padding: calc(4 * var(--sp-base)); */
 /* ----- DEFINIR AREAS ------ */
     grid-template-areas:
-        "opciones   contenido"
+        "opciones   contenedor"
         ;
 }
+
+/* RESPONSIVO */
+@media (min-width: 320px) {
+    .grid {
+        display: grid;
+        grid-template: 
+        "opciones" 15%
+        "contenedor" 1fr;
+    }
+}
+@media (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template: 
+        "opciones" 10%
+        "contenedor" 1fr;
+    }
+}
+@media (min-width: 1024px) {
+    .grid {
+        display: grid;
+        /* gap: var(--sp-lg-5); */
+        grid-template-rows: 1fr;
+        grid-template-columns: 15% 1fr;
+        /* padding: calc(4 * var(--sp-base)); */
+    /* ----- DEFINIR AREAS ------ */
+        grid-template-areas:
+            "opciones   contenedor"
+            ;
+    }
+}
+@media (min-width: 1280px) {
+    .grid {
+        display: grid;
+        /* gap: var(--sp-lg-5); */
+        grid-template-rows: 1fr;
+        grid-template-columns: 15% 1fr;
+        /* padding: calc(4 * var(--sp-base)); */
+    /* ----- DEFINIR AREAS ------ */
+        grid-template-areas:
+            "opciones   contenedor"
+            ;
+    }
+}
+
 /* 
 .grid > * {
     background-color: var(--bg-fondo);
@@ -23,8 +68,8 @@
     grid-area: opciones;
 }
 
-.contenido {
-    grid-area: contenido;
+.contenedor {
+    grid-area: contenedor;
 }
 
 

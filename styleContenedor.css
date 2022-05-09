@@ -1,11 +1,13 @@
 /* CONTENEDOR */
 .contenedor {
     display: grid;
-    grid-template-columns: 1fr 12%;
+    grid-template-columns: auto 12%;
     grid-template-rows: 1fr;
     grid-template-areas: 
         "contContenido contOpciones";
 }
+
+
 /* DOS GRID - CONTCONTENEDOR - CONTOPCIONES */
 .contContenido {
     grid-area: contContenido;
@@ -14,6 +16,9 @@
     justify-items: center;
     align-items: center;
     gap: 20px;
+
+    overflow: hidden;
+    overflow-x: scroll;
 }
 .contOpciones {
     grid-area: contOpciones;
@@ -26,14 +31,138 @@
 
 }
 
+/* RESPONSIVE */
+@media (min-width: 320px){
+    .contenedor {
+        display: grid;
+        grid-template:
+            "contContenido" 1fr
+            "contOpciones" 15%;
+    }
+    .contContenido {
+        grid-area: contContenido;
+        padding: calc(4 * (var(--sp-base)));
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        gap: calc(4 * (var(--sp-base)));
+    
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .contOpciones {
+        grid-area: contOpciones;
+        /* grid interno */
+        display: grid;
+        gap: var(--sp-lg-1);
+        padding: calc(2 * (var(--sp-base)));
+        grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50%;
+    }
+}
+@media (min-width: 758px){
+    .contenedor {
+        display: grid;
+        grid-template:
+            "contContenido" 1fr
+            "contOpciones" 20%;
+    }
+    .contContenido {
+        grid-area: contContenido;
+        padding: calc(4 * (var(--sp-base)));
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        gap: calc(4 * (var(--sp-base)));
+    
+        overflow: hidden;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    .contOpciones {
+        grid-area: contOpciones;
+        /* grid interno */
+        display: grid;
+        gap: var(--sp-lg-1);
+        padding: calc(2 * (var(--sp-base)));
+        grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50%;
+    }
+}
+@media (min-width: 1024px){
+    .contenedor {
+        display: grid;
+        grid-template-columns: auto 12%;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "contContenido contOpciones";
+    }
+    .contContenido {
+        grid-area: contContenido;
+        padding: calc(2 * (var(--sp-base)));
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+    
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .contOpciones {
+        grid-area: contOpciones;
+        /* grid interno */
+        display: grid;
+        gap: var(--sp-lg-1);
+        padding: calc(2 * (var(--sp-base)));
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    
+    }
+}
+@media (min-width: 1280px){
+    .contenedor {
+        display: grid;
+        grid-template-columns: auto 12%;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "contContenido contOpciones";
+    }
+    .contContenido {
+        grid-area: contContenido;
+        padding: calc(2 * (var(--sp-base)));
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+    
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .contOpciones {
+        grid-area: contOpciones;
+        /* grid interno */
+        display: grid;
+        gap: var(--sp-lg-1);
+        padding: calc(2 * (var(--sp-base)));
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    
+    }
+}
+/* FINAL RESPONSIVE */
+
+
+
+
 /* Contenido de card en CONTENEDOR */
 .card {
     position: relative;
-    width: 200px;
+    min-width: 200px;
     height: 130px;
     /* height: 250px; */
     transition: 0.5s;
     /* margin: 10px; */
+    float: left;
 }
 .card:hover {
     height: 250px;
