@@ -42,7 +42,7 @@
     .contContenido {
         grid-area: contContenido;
         padding: calc(4 * (var(--sp-base)));
-        display: grid;
+        display: flex;
         justify-items: center;
         align-items: center;
         gap: calc(4 * (var(--sp-base)));
@@ -70,14 +70,13 @@
     .contContenido {
         grid-area: contContenido;
         padding: calc(4 * (var(--sp-base)));
-        display: grid;
+        display: flex;
         justify-items: center;
         align-items: center;
         gap: calc(4 * (var(--sp-base)));
     
         overflow: hidden;
         overflow-x: scroll;
-        overflow-y: scroll;
     }
     .contOpciones {
         grid-area: contOpciones;
